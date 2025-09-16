@@ -10,3 +10,15 @@ C:\Users\fiand\OneDrive\Documents\COURS 2025\1er Session\PROG1236\Deevoir\Devoir
 C:\Users\fiand\OneDrive\Documents\COURS 2025\1er Session\PROG1236\Deevoir\Devoir2-PhaseA\GestionBibliotheque\obj\Debug\GestionBibliotheque.pdb
 C:\Users\fiand\OneDrive\Documents\COURS 2025\1er Session\PROG1236\Deevoir\Devoir2-PhaseA\GestionBibliotheque\obj\Debug\GestionBibliotheque.exe.config
 C:\Users\fiand\OneDrive\Documents\COURS 2025\1er Session\PROG1236\Deevoir\Devoir2-PhaseA\GestionBibliotheque\obj\Debug\GestionBibliotheque.LivreEnfantForm.resources
+C:\Users\fiand\Source\Repos\Devoir02-PhaseA\GestionBibliotheque\bin\Debug\GestionBibliotheque.exe.config
+C:\Users\fiand\Source\Repos\Devoir02-PhaseA\GestionBibliotheque\bin\Debug\GestionBibliotheque.exe
+C:\Users\fiand\Source\Repos\Devoir02-PhaseA\GestionBibliotheque\bin\Debug\GestionBibliotheque.pdb
+C:\Users\fiand\Source\Repos\Devoir02-PhaseA\GestionBibliotheque\obj\Debug\GestionBibliotheque.csproj.AssemblyReference.cache
+C:\Users\fiand\Source\Repos\Devoir02-PhaseA\GestionBibliotheque\obj\Debug\GestionBibliotheque.exe.config
+C:\Users\fiand\Source\Repos\Devoir02-PhaseA\GestionBibliotheque\obj\Debug\GestionBibliotheque.BibliothequeParentForm.resources
+C:\Users\fiand\Source\Repos\Devoir02-PhaseA\GestionBibliotheque\obj\Debug\GestionBibliotheque.LivreEnfantForm.resources
+C:\Users\fiand\Source\Repos\Devoir02-PhaseA\GestionBibliotheque\obj\Debug\GestionBibliotheque.Properties.Resources.resources
+C:\Users\fiand\Source\Repos\Devoir02-PhaseA\GestionBibliotheque\obj\Debug\GestionBibliotheque.csproj.GenerateResource.cache
+C:\Users\fiand\Source\Repos\Devoir02-PhaseA\GestionBibliotheque\obj\Debug\GestionBibliotheque.csproj.CoreCompileInputs.cache
+C:\Users\fiand\Source\Repos\Devoir02-PhaseA\GestionBibliotheque\obj\Debug\GestionBibliotheque.exe
+C:\Users\fiand\Source\Repos\Devoir02-PhaseA\GestionBibliotheque\obj\Debug\GestionBibliotheque.pdb
