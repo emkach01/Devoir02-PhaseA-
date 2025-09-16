@@ -90,7 +90,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\109_AllAnnotations_Help_16x16_72.png" />
+    <None Include="Resources\rechercher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enregistrer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dossier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copie.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
