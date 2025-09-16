@@ -551,12 +551,14 @@
             this.Controls.Add(this.ficheStatusStrip1);
             this.Controls.Add(this.ficheToolStrip1);
             this.Controls.Add(this.ficheMenuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.ficheMenuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FicheClientParent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fiche Client";
+            this.Load += new System.EventHandler(this.FicheClientParent_Load);
             this.ficheMenuStrip1.ResumeLayout(false);
             this.ficheMenuStrip1.PerformLayout();
             this.ficheToolStrip1.ResumeLayout(false);

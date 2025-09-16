@@ -101,6 +101,11 @@ namespace Devoir02
         {
             CreerNouvelleFiche();
         }
+
+        private void FicheClientParent_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 //test de push et pull  
