@@ -85,8 +85,13 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.ficheStatusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.ficheMenuStrip1.SuspendLayout();
             this.ficheToolStrip1.SuspendLayout();
+            this.ficheStatusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ficheMenuStrip1
@@ -104,7 +109,7 @@
             this.ficheMenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.ficheMenuStrip1.Name = "ficheMenuStrip1";
             this.ficheMenuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.ficheMenuStrip1.Size = new System.Drawing.Size(1215, 36);
+            this.ficheMenuStrip1.Size = new System.Drawing.Size(1215, 33);
             this.ficheMenuStrip1.TabIndex = 0;
             this.ficheMenuStrip1.Text = "ficheMenuStrip1";
             // 
@@ -368,9 +373,9 @@
             this.toolStripButton12,
             this.toolStripSeparator5,
             this.toolStripButton13});
-            this.ficheToolStrip1.Location = new System.Drawing.Point(0, 36);
+            this.ficheToolStrip1.Location = new System.Drawing.Point(0, 33);
             this.ficheToolStrip1.Name = "ficheToolStrip1";
-            this.ficheToolStrip1.Size = new System.Drawing.Size(1215, 38);
+            this.ficheToolStrip1.Size = new System.Drawing.Size(1215, 33);
             this.ficheToolStrip1.TabIndex = 1;
             this.ficheToolStrip1.Text = "ficheToolStrip1";
             // 
@@ -536,12 +541,41 @@
             // ficheStatusStrip1
             // 
             this.ficheStatusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.ficheStatusStrip1.Location = new System.Drawing.Point(0, 667);
+            this.ficheStatusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2,
+            this.toolStripStatusLabel3,
+            this.toolStripStatusLabel4});
+            this.ficheStatusStrip1.Location = new System.Drawing.Point(0, 657);
             this.ficheStatusStrip1.Name = "ficheStatusStrip1";
             this.ficheStatusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.ficheStatusStrip1.Size = new System.Drawing.Size(1215, 22);
+            this.ficheStatusStrip1.Size = new System.Drawing.Size(1215, 32);
             this.ficheStatusStrip1.TabIndex = 2;
             this.ficheStatusStrip1.Text = "ficheStatusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(49, 25);
+            this.toolStripStatusLabel1.Text = "Date";
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(59, 25);
+            this.toolStripStatusLabel2.Text = "Heure";
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(43, 25);
+            this.toolStripStatusLabel3.Text = "Prêt";
+            // 
+            // toolStripStatusLabel4
+            // 
+            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(65, 25);
+            this.toolStripStatusLabel4.Text = "Admin";
             // 
             // FicheClientParent
             // 
@@ -563,6 +597,8 @@
             this.ficheMenuStrip1.PerformLayout();
             this.ficheToolStrip1.ResumeLayout(false);
             this.ficheToolStrip1.PerformLayout();
+            this.ficheStatusStrip1.ResumeLayout(false);
+            this.ficheStatusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -626,6 +662,10 @@
         private System.Windows.Forms.ToolStripMenuItem mosaiqueHorizontaleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mosaiqueVerticaleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reorganiserLesIconesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
     }
 }
 
