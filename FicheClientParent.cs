@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Devoir02
@@ -15,78 +9,72 @@ namespace Devoir02
         public FicheClientParent()
         {
             InitializeComponent();
-            this.IsMdiContainer = true;  
+            this.IsMdiContainer = true;
+
             ficheStatusStrip1.Text = DateTime.Now.ToShortDateString();
-            AssocierImages();
+
+            AfficherIcones();
         }
 
-        private void AssocierImages()
+
+        private void AfficherIcones()
         {
             try
             {
-                if (Properties.Resources.ResourceManager.GetObject("new_file") is Image newImg)
-                    newToolStripButton1.Image = newImg;
+                newToolStripButton1.Image = Properties.Resources.DocumentHS;
+                ouvrirToolStripButton2.Image = Properties.Resources.openfolderHS;
+                saveToolStripButton3.Image = Properties.Resources.saveHS;
+                couperToolStripButton4.Image = Properties.Resources.CutHS;
+                copierToolStripButton5.Image = Properties.Resources.CopyHS;
+                collerToolStripButton6.Image = Properties.Resources.PasteHS;
 
-                if (Properties.Resources.ResourceManager.GetObject("bold") is Image boldImg)
-                    boldToolStripButton7.Image = boldImg;
 
-                if (Properties.Resources.ResourceManager.GetObject("italic") is Image italicImg)
-                    italiqueToolStripButton8.Image = italicImg;
-
-                if (Properties.Resources.ResourceManager.GetObject("underline") is Image underlineImg)
-                    underlineToolStripButton9.Image = underlineImg;
-
-                if (Properties.Resources.ResourceManager.GetObject("app_icon") is Icon appIcon)
-                    this.Icon = appIcon;
+                //this.Icon = Properties.Resources.;
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show("Erreur chargement icônes : " + ex.Message,
+                                "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-       
-        private void CreerNouvelleFiche()
+
+        // === Boutons de formatage ===
+        private void boldToolStripButton7_Click(object sender, EventArgs e)
+        {
+            ((FicheClientChild)this.ActiveMdiChild).ToggleBold();
+        }
+
+        private void italiqueToolStripButton8_Click(object sender, EventArgs e)
+        {
+            ((FicheClientChild)this.ActiveMdiChild).ToggleItalic();
+        }
+
+        private void underlineToolStripButton9_Click(object sender, EventArgs e)
+        {
+            ((FicheClientChild)this.ActiveMdiChild).ToggleUnderline();
+        }
+
+        // === Nouveau ===
+        private void newToolStripButton1_Click(object sender, EventArgs e)
         {
             var child = new FicheClientChild();
             child.MdiParent = this;
             child.Show();
         }
 
-        private FicheClientChild GetActiveFiche()
+        private void nouveauToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            return this.ActiveMdiChild as FicheClientChild;
+            var child = new FicheClientChild();
+            child.MdiParent = this;
+            child.Show();
         }
 
-        private void boldToolStripButton7_Click(object sender, EventArgs e)
-        {
-            GetActiveFiche()?.ToggleBold();
-        }
-
-        private void italiqueToolStripButton8_Click(object sender, EventArgs e)
-        {
-            GetActiveFiche()?.ToggleItalic();
-        }
-
-        private void underlineToolStripButton9_Click(object sender, EventArgs e)
-        {
-            GetActiveFiche()?.ToggleUnderline();
-        }
-
-        private void newToolStripButton1_Click(object sender, EventArgs e)
-        {
-            
-            CreerNouvelleFiche();
-        }
-
-        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+        // === Ouvrir ===
         private void ouvrirToolStripButton2_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog ofd = new OpenFileDialog())
             {
-                ofd.Filter = "Fichiers texte|*.txt|Tous les fichiers|*.*";
+                ofd.Filter = "Fichiers texte|.txt|Tous les fichiers|.*";
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     var child = new FicheClientChild();
@@ -97,14 +85,57 @@ namespace Devoir02
             }
         }
 
-        private void nouveauToolStripMenuItem_Click(object sender, EventArgs e)
+        // === Quitter ===
+        private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreerNouvelleFiche();
+            this.Close();
         }
 
-        private void FicheClientParent_Load(object sender, EventArgs e)
-        {
 
+        private void saveToolStripButton3_Click(object sender, EventArgs e)
+        {
+            ((FicheClientChild)this.ActiveMdiChild).SaveToFile();
+        }
+
+        private void couperToolStripButton4_Click_1(object sender, EventArgs e)
+        {
+            ((FicheClientChild)this.ActiveMdiChild).Cut();
+        }
+
+        private void copierToolStripButton5_Click_1(object sender, EventArgs e)
+        {
+            ((FicheClientChild)this.ActiveMdiChild).Copy();
+        }
+
+        private void collerToolStripButton6_Click_1(object sender, EventArgs e)
+        {
+            ((FicheClientChild)this.ActiveMdiChild).Paste();
+        }
+
+        private void toolStripButton13_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bienvenue dans l'aide !\n\n" +
+                            "- Nouveau / Ouvrir : gérer vos fiches\n" +
+                            "- Enregistrer : sauvegarder la fiche\n" +
+                            "- Gras / Italique / Souligné : formatage\n" +
+                            "- Couper / Copier / Coller : édition\n" +
+                            "- Alignement : mise en page",
+                            "Aide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void toolStripButton10_Click(object sender, EventArgs e)
+        {
+            ((FicheClientChild)this.ActiveMdiChild).AlignLeft();
+        }
+
+        private void toolStripButton11_Click(object sender, EventArgs e)
+        {
+            ((FicheClientChild)this.ActiveMdiChild).AlignCenter();
+        }
+
+        private void toolStripButton12_Click(object sender, EventArgs e)
+        {
+            ((FicheClientChild)this.ActiveMdiChild).AlignRight();
         }
     }
 }
